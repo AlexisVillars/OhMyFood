@@ -1,0 +1,71 @@
+@import "../Utils/colors";
+@import "../Utils/mixins";
+@import "../Utils/_normalizer.scss";
+
+/* section explore */
+.explore{
+    background-color: $lightGray;
+    padding: 0 0 2.5em;
+     address{
+        background-color: $gray;
+        padding: 1.2em 0;
+            div{
+                width:180px;
+                font-style: normal;
+                align-items: center;
+                justify-content: left;
+                margin:auto; 
+                    i{
+                        margin-right: 20px;
+                    }
+            }
+    }
+    h2{
+        font-size: 1.8em;
+        width: 70%;
+        text-align: center;
+        margin: auto;
+        margin-top: 1.5em;
+    }
+    p {
+        width: 85%;
+        text-align: center;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    div{
+        align-items: center;
+        justify-content: center;
+        button{
+            margin-top: 1.5em;
+            padding: 0 1em;
+            height: 3.5em;
+            border: transparent;
+            border-radius: 50px;
+            color: white;
+            background: linear-gradient(165deg,$pink, $purple);
+            @include boxShadow;
+        }
+    }
+}
+/* fin section explore */
+
+/*section menu */
+
+.menu{
+        nav{
+                h2{
+                    font-size: 1.6em;
+                    margin: 1em 0em 0em 0.5em;  
+                }
+                ol{
+                    margin-left: 0.5em;
+                        li{
+                            
+                        }
+                }
+        }
+}
+
+

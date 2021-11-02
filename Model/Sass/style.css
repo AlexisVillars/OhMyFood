@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@use "../Utils" as *;
+@use "../Utils" as *;
+header {
+  padding: 10px 0;
+  -webkit-box-shadow: 0 0 5px #686868;
+          box-shadow: 0 0 5px #686868;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  color: black;
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@use "../Utils" as *;
+@use "../Utils" as *;
+* {
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrap {
+  width: 800px;
+  margin: auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+img {
+  border-style: none;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+* {
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrap {
+  width: 800px;
+  margin: auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+img {
+  border-style: none;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* section explore */
+.explore {
+  background-color: #f6f6f6;
+  padding: 0 0 2.5em;
+}
+
+.explore address {
+  background-color: #eaeaea;
+  padding: 1.2em 0;
+}
+
+.explore address div {
+  width: 180px;
+  font-style: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin: auto;
+}
+
+.explore address div i {
+  margin-right: 20px;
+}
+
+.explore h2 {
+  font-size: 1.8em;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1.5em;
+}
+
+.explore p {
+  width: 85%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.explore div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.explore div button {
+  margin-top: 1.5em;
+  padding: 0 1em;
+  height: 3.5em;
+  border: transparent;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(165deg, #FF79DA, #9356DC);
+  -webkit-box-shadow: 0px 0px 10px #b6b6b6;
+          box-shadow: 0px 0px 10px #b6b6b6;
+}
+
+/* fin section explore */
+/*section menu */
+.menu nav h2 {
+  font-size: 1.6em;
+  margin: 1em 0em 0em 0.5em;
+}
+
+.menu nav ol {
+  margin-left: 0.5em;
+}
+/*# sourceMappingURL=style.css.map */

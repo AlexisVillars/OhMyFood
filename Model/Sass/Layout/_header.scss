@@ -1,0 +1,17 @@
+@use "../Utils" as *;
+
+header{
+    padding: 10px 0;
+    box-shadow: 0 0 5px rgb(104, 104, 104);
+    position: relative;
+    justify-content: center;
+    h1{
+        font-family: 'Shrikhand', cursive;
+        text-align: center;
+        color: black;
+        margin: 0;    
+        width: fit-content;
+    }
+}
+
+

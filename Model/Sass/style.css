@@ -15,6 +15,7 @@ header {
 header h1 {
   font-family: 'Shrikhand', cursive;
   text-align: center;
+  font-size: 2em;
   color: black;
   margin: 0;
   width: -webkit-fit-content;
@@ -22,11 +23,88 @@ header h1 {
   width: fit-content;
 }
 
-@use "../Utils" as *;
-@use "../Utils" as *;
 * {
   margin-top: 0px;
   font-family: 'Roboto', sans-serif;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 .wrap {
@@ -57,8 +135,210 @@ ul {
   padding: 0;
 }
 
-h1 {
-  font-size: 2em;
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+img {
+  border-style: none;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+.menu nav h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 2em 0em 0.5em 0.5em;
+}
+
+.menu nav ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu nav ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  margin: 1em;
+  height: 4em;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.menu nav ol li .div-number {
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  padding: 0.2em 0em 0em 0.4em;
+  position: absolute;
+  left: 4px;
+  color: white;
+}
+
+.menu nav ol li .div-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 10px #d1d1d1;
+          box-shadow: 0px 0px 10px #d1d1d1;
+}
+
+.menu nav ol li .div-text:hover > i {
+  color: #9356DC;
+}
+
+.menu nav ol li .div-text i {
+  margin-left: 1.5em;
+  color: #353535;
+}
+
+.menu nav ol li .div-text p {
+  margin-left: 1em;
+}
+
+.menu nav ol li .div-text:hover {
+  background-color: rgba(147, 86, 220, 0.12);
+}
+
+@use "../Utils" as *;
+* {
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.wrap {
+  width: 800px;
+  margin: auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 a {
@@ -84,6 +364,85 @@ ol {
   font-family: 'Roboto', sans-serif;
 }
 
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
 .wrap {
   width: 800px;
   margin: auto;
@@ -110,10 +469,6 @@ main {
 ul {
   list-style: none;
   padding: 0;
-}
-
-h1 {
-  font-size: 2em;
 }
 
 a {
@@ -140,33 +495,54 @@ ol {
   padding: 0 0 2.5em;
 }
 
-.explore address {
-  background-color: #eaeaea;
-  padding: 1.2em 0;
-}
-
-.explore address div {
-  width: 180px;
-  font-style: normal;
+.explore .mapssearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  margin: auto;
+  background-color: #eaeaea;
+  padding-right: 1rem;
 }
 
-.explore address div i {
-  margin-right: 20px;
+.explore .mapssearch input {
+  width: 140px;
+  text-align: center;
+  border: 1px transparent;
+  outline: none;
+  padding: 0.9rem 0rem;
+  background: #eaeaea;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.explore .mapssearch input::-webkit-input-placeholder {
+  color: #353535;
+}
+
+.explore .mapssearch input:-ms-input-placeholder {
+  color: #353535;
+}
+
+.explore .mapssearch input::-ms-input-placeholder {
+  color: #353535;
+}
+
+.explore .mapssearch input::placeholder {
+  color: #353535;
 }
 
 .explore h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 2em 0em 0.5em 0.5em;
   width: 70%;
   text-align: center;
   margin: auto;
-  margin-top: 1.5em;
 }
 
 .explore p {
@@ -188,23 +564,110 @@ ol {
 .explore div button {
   margin-top: 1.5em;
   padding: 0 1em;
+  font-size: 1em;
   height: 3.5em;
   border: transparent;
   border-radius: 50px;
   color: white;
   background: linear-gradient(165deg, #FF79DA, #9356DC);
-  -webkit-box-shadow: 0px 0px 10px #b6b6b6;
-          box-shadow: 0px 0px 10px #b6b6b6;
+  -webkit-box-shadow: 0px 0px 6px #a3a3a3;
+          box-shadow: 0px 0px 6px #a3a3a3;
+}
+
+.explore div button:hover {
+  cursor: pointer;
+  opacity: 85%;
+  -webkit-box-shadow: 1px 1px 6px black;
+          box-shadow: 1px 1px 6px black;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 /* fin section explore */
-/*section menu */
-.menu nav h2 {
-  font-size: 1.6em;
-  margin: 1em 0em 0em 0.5em;
+/*section restaurants*/
+.restaurants {
+  background-color: #f6f6f6;
+  margin-top: 2em;
 }
 
-.menu nav ol {
-  margin-left: 0.5em;
+.restaurants h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 2em 0em 0.5em 0.5em;
+  margin-bottom: 1em;
 }
+
+.restaurants div {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.restaurants div a {
+  background-color: white;
+  width: 90%;
+  margin-bottom: 2em;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 10px #d1d1d1;
+          box-shadow: 0px 0px 10px #d1d1d1;
+}
+
+.restaurants div a article {
+  width: 100%;
+  position: relative;
+}
+
+.restaurants div a article .boxImg {
+  height: 12em;
+  position: relative;
+}
+
+.restaurants div a article .boxImg img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurants div a article .boxImg div {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  background-color: #99E2D0;
+  padding: 0.2em 0.5em;
+  color: #1b6150;
+}
+
+.restaurants div a article h3 {
+  font-weight: bold;
+  color: black;
+  margin: 1em 0 0 0.7em;
+}
+
+.restaurants div a article p {
+  color: black;
+  margin: 0.5em 0 1em 0.7em;
+}
+
+.restaurants div a article i {
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+  font-size: 1.5em;
+}
+
+.restaurants div a article i:hover {
+  color: #9356DC;
+}
+
+/*fin section restaurants */
+/*section menu */
 /*# sourceMappingURL=style.css.map */

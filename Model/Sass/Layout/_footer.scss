@@ -1,1 +1,23 @@
 @use "../Utils" as *;
+
+footer{
+    background-color: #353535;
+        .logoFooter{
+            display: block;
+            font-size: 1.2em;
+            color: white;
+            padding-top: 1em;
+            margin: 0 0 1em 1em;
+            font-family: 'Shrikhand', cursive;
+            width: fit-content;    
+        }
+        
+        ul{
+                li{
+                    padding: 0 0 0.5em 1em;
+                        a{
+                            color: white;
+                        }
+                }
+        }
+}

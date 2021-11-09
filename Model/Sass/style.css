@@ -229,6 +229,30 @@ ol {
 }
 
 @use "../Utils" as *;
+footer {
+  background-color: #353535;
+}
+
+footer .logoFooter {
+  display: block;
+  font-size: 1.2em;
+  color: white;
+  padding-top: 1em;
+  margin: 0 0 1em 1em;
+  font-family: 'Shrikhand', cursive;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+footer ul li {
+  padding: 0 0 0.5em 1em;
+}
+
+footer ul li a {
+  color: white;
+}
+
 * {
   margin-top: 0px;
   font-family: 'Roboto', sans-serif;
@@ -657,15 +681,29 @@ ol {
   margin: 0.5em 0 1em 0.7em;
 }
 
-.restaurants div a article i {
+.restaurants div a article .emptyHeart {
   position: absolute;
   bottom: 0.5em;
   right: 1em;
   font-size: 1.5em;
+  color: black;
 }
 
-.restaurants div a article i:hover {
-  color: #9356DC;
+.restaurants div a article .fullHeart {
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+  font-size: 1.5em;
+  opacity: 0;
+  color: transparent;
+}
+
+.restaurants div a article .fullHeart:hover {
+  background: linear-gradient(165deg, #FF79DA, #9356DC);
+  opacity: 1;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  background-clip: text;
 }
 
 /*fin section restaurants */

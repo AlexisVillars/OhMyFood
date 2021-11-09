@@ -109,15 +109,27 @@
                                     margin: 0.5em 0 1em 0.7em;
                                     
                                 }  
-                                i{
+                                .emptyHeart{
                                     position: absolute;
                                     bottom: 0.5em;
                                     right: 1em;
                                     font-size: 1.5em;
+                                    color: black;
+                                }
+                                .fullHeart{
+                                    position: absolute;
+                                    bottom: 0.5em;
+                                    right: 1em;
+                                    font-size: 1.5em;
+                                    opacity: 0;
+                                    color: transparent;
                                         &:hover{
-                                            color: $purple;
+                                            background: $button;
+                                            opacity: 1;
+                                            transition-duration: 0.1s;
+                                            background-clip: text;
                                         }
-                                }         
+                                }        
                         }
                 }
         }
@@ -130,7 +142,3 @@
 /*fin section restaurants */
 
 /*section menu */
-
-
-
-

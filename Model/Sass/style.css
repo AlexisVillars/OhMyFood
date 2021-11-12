@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @use "../Utils" as *;
@@ -169,7 +170,7 @@ ol {
           flex-direction: column;
 }
 
-.menu nav ol li {
+.menu nav li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,18 +186,40 @@ ol {
   width: 90%;
 }
 
-.menu nav ol li .div-number {
+.menu nav li .div-number1 {
   background-color: #9356DC;
   border-radius: 50%;
   width: 1.4em;
   height: 1.4em;
   padding: 0.2em 0em 0em 0.4em;
-  position: absolute;
-  left: 4px;
   color: white;
+  margin-right: -0.5em;
+  z-index: 2;
 }
 
-.menu nav ol li .div-text {
+.menu nav li .div-number2 {
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  padding: 0.2em 0em 0em 0.4em;
+  color: white;
+  margin-right: -0.5em;
+  z-index: 2;
+}
+
+.menu nav li .div-number3 {
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  padding: 0.2em 0em 0em 0.4em;
+  color: white;
+  margin-right: -0.5em;
+  z-index: 2;
+}
+
+.menu nav li .div-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,23 +234,45 @@ ol {
           box-shadow: 0px 0px 10px #d1d1d1;
 }
 
-.menu nav ol li .div-text:hover > i {
+.menu nav li .div-text:hover > i {
   color: #9356DC;
 }
 
-.menu nav ol li .div-text i {
+.menu nav li .div-text i {
   margin-left: 1.5em;
   color: #353535;
 }
 
-.menu nav ol li .div-text p {
+.menu nav li .div-text p {
   margin-left: 1em;
 }
 
-.menu nav ol li .div-text:hover {
+.menu nav li .div-text:hover {
   background-color: rgba(147, 86, 220, 0.12);
 }
 
+@media (min-width: 768px) {
+  main .menu nav ol {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/*
+@media (min-width: 1025px) {
+    main {
+
+    }
+}
+
+@media (min-width: 1400px) {
+    main {
+
+    }
+}
+*/
 @use "../Utils" as *;
 footer {
   background-color: #353535;
@@ -513,6 +558,56 @@ ol {
   padding: 0;
 }
 
+/*loader*/
+.dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.dual-ring::after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #9356DC transparent #FF79DA transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* section explore */
 .explore {
   background-color: #f6f6f6;
@@ -706,6 +801,226 @@ ol {
   background-clip: text;
 }
 
+@media (min-width: 1025px) {
+  .restaurants div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .restaurants div a {
+    width: 48%;
+  }
+}
+
 /*fin section restaurants */
 /*section menu */
+body {
+  font-family: "Roboto", sans-serif;
+  /* Loader animation */
+  /* circle animation */
+  /* loader visibility animation */
+}
+
+body .loadercontainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 3;
+  -webkit-animation: loaderload 0.5s;
+          animation: loaderload 0.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  /* Loader position */
+}
+
+body .loadercontainer .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: white;
+  /* circle */
+  /* big circle */
+  /* medium circle */
+  /* small circle */
+  /* dot circle */
+}
+
+body .loadercontainer .loader .face {
+  position: absolute;
+  border: 3px solid white;
+}
+
+body .loadercontainer .loader .face1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 50%;
+  border-top: 3px solid #9356DC;
+  border-left: 3px solid #9356DC;
+  border-right: 3px solid #9356DC;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+
+body .loadercontainer .loader .face1 .circle {
+  -webkit-transform: rotate(-315deg);
+          transform: rotate(-315deg);
+}
+
+body .loadercontainer .loader .face1 .circle:before {
+  background: #9356DC;
+}
+
+body .loadercontainer .loader .face2 {
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  background: white;
+  border-radius: 50%;
+  border-right: 3px solid #FF79DA;
+  border-bottom: 3px solid #FF79DA;
+  animation: animate 2s linear reverse infinite;
+}
+
+body .loadercontainer .loader .face2 .circle {
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+
+body .loadercontainer .loader .face2 .circle:before {
+  background: #FF79DA;
+}
+
+body .loadercontainer .loader .face3 {
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  bottom: 60px;
+  background: white;
+  border-radius: 50%;
+  border-left: 3px solid #99E2D0;
+  border-top: 3px solid #99E2D0;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+
+body .loadercontainer .loader .face3 .circle {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body .loadercontainer .loader .face3 .circle:before {
+  background: #99E2D0;
+}
+
+body .loadercontainer .loader .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+body .loadercontainer .loader .circle:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: -4px;
+  right: -4px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loaderload {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loaderload {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* loader intégration animation */
+#bodyindex {
+  -webkit-animation: bodyhidden 0.5s;
+          animation: bodyhidden 0.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+/* loader and scroll hide animation */
+@-webkit-keyframes bodyhidden {
+  0% {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  100% {
+    visibility: visible;
+    overflow-y: visible;
+  }
+}
+@keyframes bodyhidden {
+  0% {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  100% {
+    visibility: visible;
+    overflow-y: visible;
+  }
+}
 /*# sourceMappingURL=style.css.map */

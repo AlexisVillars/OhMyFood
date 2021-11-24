@@ -2,8 +2,6 @@
 @import "../Utils/mixins";
 @import "../Utils/_normalizer.scss";
 
-/*loader*/
-@include loading;
 
 /* section explore */
 .explore{
@@ -100,6 +98,7 @@
                                             background-color: $green;
                                             padding: 0.2em 0.5em;
                                             color: darken($green,50%);
+                                            border-radius: 3px;
                                         }         
                                 }
                                 h3{
@@ -119,6 +118,9 @@
                                     font-size: 1.5em;
                                     color: black;
                                 }
+                                    &:hover{
+                                        color: transparent;
+                                    }
                                 .fullHeart{
                                     position: absolute;
                                     bottom: 0.5em;
@@ -151,8 +153,5 @@
 }
 
 
-
-
 /*fin section restaurants */
 
-/*section menu */

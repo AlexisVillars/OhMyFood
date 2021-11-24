@@ -1,18 +1,26 @@
 @use "../Utils" as *;
+@import "../Utils/colors";
 
 header{
     padding: 10px 0;
     box-shadow: 0 0 5px rgb(104, 104, 104);
     position: relative;
     justify-content: center;
-    h1{
-        font-family: 'Shrikhand', cursive;
-        text-align: center;
-        font-size: 2em;
-        color: black;
-        margin: 0;    
-        width: fit-content;
-    }
+        .backindex{
+            position: absolute;
+            left: 1em;
+            top: 1em;
+            transform: scale(1.2);
+            color: $bgdarkgrey;
+        }
+        h1{
+            font-family: 'Shrikhand', cursive;
+            text-align: center;
+            font-size: 2em;
+            color: black;
+            margin: 0;    
+            width: fit-content;
+        }
 }
 
 

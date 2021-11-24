@@ -3,10 +3,11 @@
 @import "Layout/_menu";
 @import "Layout/_footer";
 @import "Utils/_normalizer";
+@import "Utils/components";
 @import "Utils/index";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+ 
 body {
     font-family: "Roboto", sans-serif;
   
@@ -18,7 +19,7 @@ body {
        background-color: white;
        z-index: 3;
        animation: loaderload 0.5s;
-       animation-delay: 2.5s;
+       animation-delay: 1s;
        animation-fill-mode: both;
        /* Loader position */
        .loader {
@@ -33,7 +34,7 @@ body {
          .face {
            position: absolute;
            border: 3px solid white;
-           
+
          }
          /* big circle */
          .face1 {
@@ -46,7 +47,7 @@ body {
            border-top: 3px solid $purple;
            border-left: 3px solid $purple;
            border-right: 3px solid $purple;
-           animation: animate 2s linear infinite;
+           animation: animate 1.5s linear infinite;
            .circle {
              transform: rotate(-315deg);
              &:before {
@@ -64,7 +65,7 @@ body {
            border-radius: 50%;
            border-right: 3px solid $pink;
            border-bottom: 3px solid $pink;
-           animation: animate 2s linear reverse infinite;
+           animation: animate 1.5s linear reverse infinite;
            .circle {
              transform: rotate(-50deg);
              &:before {
@@ -82,7 +83,7 @@ body {
            border-radius: 50%;
            border-left: 3px solid $green;
            border-top: 3px solid $green;
-           animation: animate 2s linear infinite;
+           animation: animate 1.5s linear infinite;
            .circle {
              transform: rotate(-45deg);
              &:before {
@@ -90,26 +91,8 @@ body {
              }
            }
          }
-         /* dot circle */
-         .circle {
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           width: 50%;
-           height: 2px;
-           transform-origin: left;
-           &:before {
-             content: "";
-             position: absolute;
-             width: 10px;
-             height: 10px;
-             border-radius: 50%;
-             top: -4px;
-             right: -4px;
-           }
-         }
        }
-     }
+     } 
   
      /* circle animation */
      @keyframes animate {
@@ -137,7 +120,7 @@ body {
    /* loader intégration animation */
    #bodyindex {
      animation: bodyhidden 0.5s;
-     animation-delay: 2.5s;
+     animation-delay: 1s;
      animation-fill-mode: both;
    }
   

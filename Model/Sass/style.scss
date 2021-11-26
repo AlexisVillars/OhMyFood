@@ -3,6 +3,134 @@
 @import "Layout/_menu";
 @import "Layout/_footer";
 @import "Utils/_normalizer";
+@import "Utils/components";
 @import "Utils/index";
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  /* Loader animation */
+  .loadercontainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 3;
+    animation: loaderload 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    /* Loader position */
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      background: white;
+      /* circle */
+      .face {
+        position: absolute;
+        border: 3px solid white;
+      }
+      /* big circle */
+      .face1 {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        border-radius: 50%;
+        border-top: 3px solid $purple;
+        border-left: 3px solid $purple;
+        border-right: 3px solid $purple;
+        animation: animate 1.5s linear infinite;
+        .circle {
+          transform: rotate(-315deg);
+          &:before {
+            background: $purple;
+          }
+        }
+      }
+      /* medium circle */
+      .face2 {
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        background: white;
+        border-radius: 50%;
+        border-right: 3px solid $pink;
+        border-bottom: 3px solid $pink;
+        animation: animate 1.5s linear reverse infinite;
+        .circle {
+          transform: rotate(-50deg);
+          &:before {
+            background: $pink;
+          }
+        }
+      }
+      /* small circle */
+      .face3 {
+        top: 60px;
+        left: 60px;
+        right: 60px;
+        bottom: 60px;
+        background: white;
+        border-radius: 50%;
+        border-left: 3px solid $green;
+        border-top: 3px solid $green;
+        animation: animate 1.5s linear infinite;
+        .circle {
+          transform: rotate(-45deg);
+          &:before {
+            background: $green;
+          }
+        }
+      }
+    }
+  }
+
+  /* circle animation */
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* loader visibility animation */
+  @keyframes loaderload {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+/* loader intégration animation */
+#bodyindex {
+  animation: bodyhidden 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+/* loader and scroll hide animation */
+@keyframes bodyhidden {
+  0% {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  100% {
+    visibility: visible;
+    overflow-y: visible;
+  }
+}

@@ -1,56 +1,64 @@
 @import "../Utils/colors";
 @import "../Utils/mixins";
 @import "../Utils/_normalizer.scss";
-.menu{
-    nav{
-            h2{
-                @include h2title
-            }
-            ol{
-                 display: flex;
-                 flex-direction: column;
-                li{
-                    display: flex;
-                    margin: auto;
-                    margin: 1em;
-                    height: 4em;
-                    justify-content: left;
-                    align-items: center;
-                    width: 90%;                        
-                
-                            .div-number{
-                                background-color: $purple;
-                                border-radius: 50%;
-                                width: 1.4em;
-                                height: 1.4em;
-                                padding: 0.2em 0em 0em 0.4em;
-                                position: absolute;
-                                left : 4px;  
-                                color: white;                            
-                            }
-                            .div-text{
-                                display: flex;
-                                height: 100%;
-                                width: 100%;
-                                align-items: center;
-                                background-color: $lightGray;
-                                border-radius: 20px;
-                                    &:hover > i{
-                                        color: $purple;
-                                    }
-                                    i{
-                                        margin-left: 1.5em;
-                                        color: $bgdarkgrey;
-                                    }
-                                    p{
-                                        margin-left: 1em;
-                                    }
-                                    @include box-shadow;
-                                    &:hover{
-                                        background-color: $lightPurple;
-                                    }  
-                            }
-                    }
-            }
+.menu {
+  nav {
+    h2 {
+      @include h2title;
     }
+    ol {
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      display: flex;
+      margin: auto;
+      margin: 1em;
+      height: 4em;
+      justify-content: left;
+      align-items: center;
+      width: 90%;
+
+      .div-number1 {
+        @include number;
+      }
+      .div-number2 {
+        @include number;
+      }
+      .div-number3 {
+        @include number;
+      }
+      .div-text {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        background-color: $lightGray;
+        border-radius: 20px;
+        &:hover > i {
+          color: $purple;
+        }
+        i {
+          margin-left: 1.5em;
+          color: $bgdarkgrey;
+        }
+        p {
+          margin-left: 1em;
+        }
+        @include box-shadow;
+        &:hover {
+          background-color: $lightPurple;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    .menu nav ol {
+      flex-direction: row;
+    }
+  }
 }

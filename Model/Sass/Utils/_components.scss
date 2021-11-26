@@ -1,0 +1,191 @@
+@use "../Utils" as *;
+
+.menu1 main {
+  .boxImg {
+    img {
+      object-fit: cover;
+      height: 250px;
+      width: 100%;
+    }
+  }
+  .carte {
+    .title {
+      justify-content: space-between;
+      background-color: $lightGray;
+      border-radius: 35px 35px 0 0;
+      padding: 1.5em 0 0 0;
+      position: absolute;
+      top: 260px;
+      width: 100%;
+      h2 {
+        font-family: "Shrikhand", cursive;
+        font-size: 1.5em;
+        margin-left: 0.7em;
+      }
+      .emptyHeart {
+        font-size: 1.5em;
+        transform: translateX(4px);
+      }
+      .fullHeart {
+        opacity: 0;
+        color: transparent;
+        font-size: 1.5em;
+        transform: translateX(-24px);
+        z-index: 3;
+        &:hover {
+          background: $button;
+          opacity: 1;
+          transition-duration: 0.1s;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+        }
+        &:active {
+          background: $button;
+          opacity: 1;
+          transition-duration: 0.1s;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+        }
+      }
+    }
+    .plats {
+      flex-direction: column;
+      align-items: left;
+      background-color: $lightGray;
+      padding-top: 2em;
+      .listcontainer {
+        h3 {
+          font-size: 1.2em;
+          font-weight: 300;
+          margin: 1em 0 1.5em 0.9em;
+          color: $bgdarkgrey;
+          span {
+            border-bottom: solid 3px $green;
+            width: fit-content;
+          }
+        }
+        ul {
+          @include loading-loop-phone;
+          li {
+            background: white;
+            border-radius: 15px;
+            width: 92%;
+            margin: auto;
+            margin-bottom: 1.2em;
+            @include box-shadow;
+            text-overflow: ellipsis;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            animation: list-item-animation 1000ms forwards;
+            opacity: 0;
+
+            &:hover > span {
+              right: 0;
+            }
+            &:hover > span i {
+              transform: rotate(0deg);
+            }
+            &:hover > .price {
+              transform: translateX(-5em);
+            }
+            &:hover > .divplate {
+              margin-right: 6em;
+            }
+
+            .divplate {
+              width: 90%;
+              min-width: 50%;
+              transition-duration: 0.5s;
+
+              .plate {
+                padding: 0.7em 0 0 0.7em;
+                font-weight: bold;
+                font-size: 1.1;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+              .description {
+                padding: 0.3em 0 0.7em 0.7em;
+                font-weight: normal;
+                color: $bgdarkgrey;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
+            .price {
+              font-weight: bold;
+              padding-right: 1em;
+              transition-duration: 0.5s;
+            }
+            span {
+              display: flex;
+              position: absolute;
+              width: 5em;
+              height: 64px;
+              background-color: $green;
+              justify-content: center;
+              align-items: center;
+              border-radius: 0 15px 15px 0;
+              text-align: right;
+              opacity: 1;
+              transform-origin: right;
+              transform: scaleX(1);
+              transition: all 0.5s;
+              right: -5em;
+              z-index: 5;
+
+              i {
+                background-color: $green;
+                color: white;
+                transform: rotate(360deg);
+                transition-duration: 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .buttonbox {
+    align-items: center;
+    justify-content: center;
+    background-color: $lightGray;
+    button {
+      margin: 1.5em 0 3em 0;
+      padding: 0 3em;
+      font-size: 1em;
+      height: 3em;
+      border: transparent;
+      border-radius: 50px;
+      color: white;
+      background: $button;
+      @include button-shadow;
+      &:hover {
+        @include button-hover;
+      }
+    }
+  }
+}
+
+@include li-animation;
+
+@media (min-width: 1025px) {
+  .menu1 main .carte .plats {
+    flex-direction: row;
+    justify-content: space-around;
+    .listcontainer {
+      width: 32%;
+    }
+  }
+}

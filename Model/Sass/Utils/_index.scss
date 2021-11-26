@@ -2,156 +2,163 @@
 @import "../Utils/mixins";
 @import "../Utils/_normalizer.scss";
 
-
 /* section explore */
-.explore{
-    background-color: $lightGray;
-    padding: 0 0 2.5em;
-    .mapssearch{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $gray;
-        padding-right: 1rem;
-            input{
-                width:140px;
-                text-align: center;
-                border: 1px transparent;
-                outline: none;
-                padding: 0.9rem 0rem;
-                background: $gray;
-                font-size: 1rem;
-                font-weight: bold;
-                    &::placeholder{
-                        color: $bgdarkgrey;
-                    }
-            }
+.explore {
+  background-color: $lightGray;
+  padding: 0 0 2.5em;
+  .mapssearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray;
+    padding-right: 1rem;
+    input {
+      width: 140px;
+      text-align: center;
+      border: 1px transparent;
+      outline: none;
+      padding: 0.9rem 0rem;
+      background: $gray;
+      font-size: 1rem;
+      font-weight: bold;
+      &::placeholder {
+        color: $bgdarkgrey;
+      }
     }
-    h2{
-        @include h2title;
-        width: 70%;
-        text-align: center;
-        margin: auto;
-    }
-    p {
-        width: 85%;
-        text-align: center;
-        margin: auto;
-        margin-top: 1em;
-    }
+  }
+  h2 {
+    @include h2title;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+  }
+  p {
+    width: 85%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+  }
 
-    div{
-        align-items: center;
-        justify-content: center;
-        button{
-            margin-top: 1.5em;
-            padding: 0 1em;
-            font-size: 1em;
-            height: 3.5em;
-            border: transparent;
-            border-radius: 50px;
-            color: white;
-            background: $button;
-            @include button-shadow;
-                &:hover{
-                    @include button-hover;
-                }
-        }
+  div {
+    align-items: center;
+    justify-content: center;
+    button {
+      margin-top: 1.5em;
+      padding: 0 1em;
+      font-size: 1em;
+      height: 3.5em;
+      border: transparent;
+      border-radius: 50px;
+      color: white;
+      background: $button;
+      @include button-shadow;
+      &:hover {
+        @include button-hover;
+      }
     }
+  }
 }
 /* fin section explore */
 
 /*section restaurants*/
-.restaurants{
-    background-color: $lightGray;
-    margin-top: 2em;
-        h2{
-            @include h2title;
-            margin-bottom: 1em;
+.restaurants {
+  background-color: $lightGray;
+  margin-top: 2em;
+  h2 {
+    @include h2title;
+    margin-bottom: 1em;
+  }
+  div {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    a {
+      background-color: white;
+      width: 90%;
+      margin-bottom: 2em;
+      border-radius: 15px;
+      @include box-shadow;
+      article {
+        width: 100%;
+        position: relative;
+        .boxImg {
+          height: 12em;
+          position: relative;
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+          }
+          div {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            background-color: $green;
+            padding: 0.2em 0.5em;
+            color: darken($green, 50%);
+            border-radius: 3px;
+          }
         }
-        div{
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-                a{
-                    background-color: white;
-                    width: 90%;
-                    margin-bottom: 2em;
-                    border-radius: 15px;
-                    @include box-shadow;
-                        article{
-                            width: 100%;
-                            position: relative;
-                                .boxImg{
-                                    height: 12em;
-                                    position: relative;
-                                        img{
-                                            height: 100%;
-                                            width: 100%;
-                                            border-radius: 15px 15px 0 0;
-                                            object-fit :cover;
-                                        }     
-                                        div{
-                                            position: absolute;
-                                            top:13px;
-                                            right:13px;
-                                            background-color: $green;
-                                            padding: 0.2em 0.5em;
-                                            color: darken($green,50%);
-                                            border-radius: 3px;
-                                        }         
-                                }
-                                h3{
-                                    font-weight: bold;
-                                    color: black;
-                                    margin: 1em 0 0 0.7em;
-                                }
-                                p{
-                                    color:black;
-                                    margin: 0.5em 0 1em 0.7em;
-                                    
-                                }  
-                                .emptyHeart{
-                                    position: absolute;
-                                    bottom: 0.5em;
-                                    right: 1em;
-                                    font-size: 1.5em;
-                                    color: black;
-                                }
-                                    &:hover{
-                                        color: transparent;
-                                    }
-                                .fullHeart{
-                                    position: absolute;
-                                    bottom: 0.5em;
-                                    right: 1em;
-                                    font-size: 1.5em;
-                                    opacity: 0;
-                                    color: transparent;
-                                        &:hover{
-                                            background: $button;
-                                            opacity: 1;
-                                            transition-duration: 0.1s;
-                                            background-clip: text;
-                                        }
-                                }        
-                        }
-                }
+        h3 {
+          font-weight: bold;
+          color: black;
+          margin: 1em 0 0 0.7em;
         }
-
-}
-@media (min-width: 1025px){
-    .restaurants div{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-            a{
-                width: 48%;
-                
+        p {
+          color: black;
+          margin: 0.5em 0 1em 0.7em;
+        }
+        .emptyHeart {
+          position: absolute;
+          bottom: 0.5em;
+          right: 1em;
+          font-size: 1.5em;
+          color: black;
+        }
+        .fullHeart {
+          position: absolute;
+          bottom: 0.5em;
+          right: 1em;
+          font-size: 1.5em;
+          opacity: 0;
+          color: transparent;
+          &:hover {
+            background: $button;
+            opacity: 1;
+            transition-duration: 0.1s;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+          }
+          &:active {
+            &:active {
+              background: $button;
+              opacity: 1;
+              transition-duration: 0.1s;
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              -moz-background-clip: text;
+              -moz-text-fill-color: transparent;
             }
+          }
+        }
+      }
     }
+  }
 }
-
+@media (min-width: 1025px) {
+  .restaurants div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a {
+      width: 48%;
+    }
+  }
+}
 
 /*fin section restaurants */
-

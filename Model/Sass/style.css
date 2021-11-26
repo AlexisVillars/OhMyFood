@@ -196,35 +196,35 @@ ol {
 }
 
 .menu nav li .div-number1 {
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 50%;
   width: 1.4em;
   height: 1.4em;
-  padding: 0.2em 0em 0em 0.4em;
+  padding: 0.15em 0em 0em 0.4em;
   color: white;
-  margin-right: -0.5em;
+  margin-right: -0.65em;
   z-index: 2;
 }
 
 .menu nav li .div-number2 {
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 50%;
   width: 1.4em;
   height: 1.4em;
-  padding: 0.2em 0em 0em 0.4em;
+  padding: 0.15em 0em 0em 0.4em;
   color: white;
-  margin-right: -0.5em;
+  margin-right: -0.65em;
   z-index: 2;
 }
 
 .menu nav li .div-number3 {
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 50%;
   width: 1.4em;
   height: 1.4em;
-  padding: 0.2em 0em 0em 0.4em;
+  padding: 0.15em 0em 0em 0.4em;
   color: white;
-  margin-right: -0.5em;
+  margin-right: -0.65em;
   z-index: 2;
 }
 
@@ -244,7 +244,7 @@ ol {
 }
 
 .menu nav li .div-text:hover > i {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .menu nav li .div-text i {
@@ -269,19 +269,6 @@ ol {
   }
 }
 
-/*
-@media (min-width: 1025px) {
-    main {
-
-    }
-}
-
-@media (min-width: 1400px) {
-    main {
-
-    }
-}
-*/
 @use "../Utils" as *;
 footer {
   background-color: #353535;
@@ -293,7 +280,7 @@ footer .logoFooter {
   color: white;
   padding-top: 1em;
   margin: 0 0 1em 1em;
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -466,7 +453,7 @@ ol {
 }
 
 .menu1 main .carte .title h2 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   font-size: 1.5em;
   margin-left: 0.7em;
 }
@@ -487,11 +474,27 @@ ol {
 }
 
 .menu1 main .carte .title .fullHeart:hover {
-  background: linear-gradient(165deg, #FF79DA, #9356DC);
+  background: linear-gradient(165deg, #ff79da, #9356dc);
   opacity: 1;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.menu1 main .carte .title .fullHeart:active {
+  background: linear-gradient(165deg, #ff79da, #9356dc);
+  opacity: 1;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 .menu1 main .carte .plats {
@@ -514,7 +517,7 @@ ol {
 }
 
 .menu1 main .carte .plats .listcontainer h3 span {
-  border-bottom: solid 3px #99E2D0;
+  border-bottom: solid 3px #99e2d0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -652,7 +655,7 @@ ol {
   position: absolute;
   width: 5em;
   height: 64px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -673,7 +676,7 @@ ol {
 }
 
 .menu1 main .carte .plats .listcontainer ul li span i {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: white;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -699,7 +702,7 @@ ol {
   border: transparent;
   border-radius: 50px;
   color: white;
-  background: linear-gradient(165deg, #FF79DA, #9356DC);
+  background: linear-gradient(165deg, #ff79da, #9356dc);
   -webkit-box-shadow: 0px 0px 6px #a3a3a3;
           box-shadow: 0px 0px 6px #a3a3a3;
 }
@@ -961,7 +964,7 @@ ol {
   border: transparent;
   border-radius: 50px;
   color: white;
-  background: linear-gradient(165deg, #FF79DA, #9356DC);
+  background: linear-gradient(165deg, #ff79da, #9356dc);
   -webkit-box-shadow: 0px 0px 6px #a3a3a3;
           box-shadow: 0px 0px 6px #a3a3a3;
 }
@@ -1033,7 +1036,7 @@ ol {
   position: absolute;
   top: 13px;
   right: 13px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 0.2em 0.5em;
   color: #1b6150;
   border-radius: 3px;
@@ -1058,10 +1061,6 @@ ol {
   color: black;
 }
 
-.restaurants div a article:hover {
-  color: transparent;
-}
-
 .restaurants div a article .fullHeart {
   position: absolute;
   bottom: 0.5em;
@@ -1072,11 +1071,27 @@ ol {
 }
 
 .restaurants div a article .fullHeart:hover {
-  background: linear-gradient(165deg, #FF79DA, #9356DC);
+  background: linear-gradient(165deg, #ff79da, #9356dc);
   opacity: 1;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.restaurants div a article .fullHeart:active:active {
+  background: linear-gradient(165deg, #ff79da, #9356dc);
+  opacity: 1;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 @media (min-width: 1025px) {
@@ -1145,9 +1160,9 @@ body .loadercontainer .loader .face1 {
   bottom: 0;
   background: white;
   border-radius: 50%;
-  border-top: 3px solid #9356DC;
-  border-left: 3px solid #9356DC;
-  border-right: 3px solid #9356DC;
+  border-top: 3px solid #9356dc;
+  border-left: 3px solid #9356dc;
+  border-right: 3px solid #9356dc;
   -webkit-animation: animate 1.5s linear infinite;
           animation: animate 1.5s linear infinite;
 }
@@ -1158,7 +1173,7 @@ body .loadercontainer .loader .face1 .circle {
 }
 
 body .loadercontainer .loader .face1 .circle:before {
-  background: #9356DC;
+  background: #9356dc;
 }
 
 body .loadercontainer .loader .face2 {
@@ -1168,8 +1183,8 @@ body .loadercontainer .loader .face2 {
   bottom: 30px;
   background: white;
   border-radius: 50%;
-  border-right: 3px solid #FF79DA;
-  border-bottom: 3px solid #FF79DA;
+  border-right: 3px solid #ff79da;
+  border-bottom: 3px solid #ff79da;
   animation: animate 1.5s linear reverse infinite;
 }
 
@@ -1179,7 +1194,7 @@ body .loadercontainer .loader .face2 .circle {
 }
 
 body .loadercontainer .loader .face2 .circle:before {
-  background: #FF79DA;
+  background: #ff79da;
 }
 
 body .loadercontainer .loader .face3 {
@@ -1189,8 +1204,8 @@ body .loadercontainer .loader .face3 {
   bottom: 60px;
   background: white;
   border-radius: 50%;
-  border-left: 3px solid #99E2D0;
-  border-top: 3px solid #99E2D0;
+  border-left: 3px solid #99e2d0;
+  border-top: 3px solid #99e2d0;
   -webkit-animation: animate 1.5s linear infinite;
           animation: animate 1.5s linear infinite;
 }
@@ -1201,7 +1216,7 @@ body .loadercontainer .loader .face3 .circle {
 }
 
 body .loadercontainer .loader .face3 .circle:before {
-  background: #99E2D0;
+  background: #99e2d0;
 }
 
 @-webkit-keyframes animate {

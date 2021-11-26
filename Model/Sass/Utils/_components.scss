@@ -1,5 +1,3 @@
-@use "../Utils" as *;
-
 .menu1 main {
   .boxImg {
     img {
@@ -56,7 +54,6 @@
     }
     .plats {
       flex-direction: column;
-      align-items: left;
       background-color: $lightGray;
       padding-top: 2em;
       .listcontainer {
@@ -109,7 +106,6 @@
               .plate {
                 padding: 0.7em 0 0 0.7em;
                 font-weight: bold;
-                font-size: 1.1;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;

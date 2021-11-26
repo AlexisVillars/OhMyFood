@@ -1,11 +1,9 @@
-@use "../Utils" as *;
-
 footer {
   background-color: #353535;
   .logoFooter {
     display: block;
     font-size: 1.2em;
-    color: white;
+    color: rgb(255, 255, 255);
     padding-top: 1em;
     margin: 0 0 1em 1em;
     font-family: "Shrikhand", cursive;

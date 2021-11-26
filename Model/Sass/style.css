@@ -1,8 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@use "../Utils" as *;
-@use "../Utils" as *;
 header {
   padding: 10px 0;
   -webkit-box-shadow: 0 0 5px #686868;
@@ -23,7 +21,7 @@ header .backindex {
 }
 
 header h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   text-align: center;
   font-size: 2em;
   color: black;
@@ -269,7 +267,6 @@ ol {
   }
 }
 
-@use "../Utils" as *;
 footer {
   background-color: #353535;
 }
@@ -432,7 +429,6 @@ ol {
   padding: 0;
 }
 
-@use "../Utils" as *;
 .menu1 main .boxImg img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -502,9 +498,6 @@ ol {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   background-color: #f6f6f6;
   padding-top: 2em;
 }
@@ -626,7 +619,6 @@ ol {
 .menu1 main .carte .plats .listcontainer ul li .divplate .plate {
   padding: 0.7em 0 0 0.7em;
   font-weight: bold;
-  font-size: 1.1;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

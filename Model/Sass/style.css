@@ -1159,15 +1159,6 @@ body .loadercontainer .loader .face1 {
           animation: animate 1.5s linear infinite;
 }
 
-body .loadercontainer .loader .face1 .circle {
-  -webkit-transform: rotate(-315deg);
-          transform: rotate(-315deg);
-}
-
-body .loadercontainer .loader .face1 .circle:before {
-  background: #9356dc;
-}
-
 body .loadercontainer .loader .face2 {
   top: 30px;
   left: 30px;
@@ -1178,15 +1169,6 @@ body .loadercontainer .loader .face2 {
   border-right: 3px solid #ff79da;
   border-bottom: 3px solid #ff79da;
   animation: animate 1.5s linear reverse infinite;
-}
-
-body .loadercontainer .loader .face2 .circle {
-  -webkit-transform: rotate(-50deg);
-          transform: rotate(-50deg);
-}
-
-body .loadercontainer .loader .face2 .circle:before {
-  background: #ff79da;
 }
 
 body .loadercontainer .loader .face3 {
@@ -1200,15 +1182,6 @@ body .loadercontainer .loader .face3 {
   border-top: 3px solid #99e2d0;
   -webkit-animation: animate 1.5s linear infinite;
           animation: animate 1.5s linear infinite;
-}
-
-body .loadercontainer .loader .face3 .circle {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-body .loadercontainer .loader .face3 .circle:before {
-  background: #99e2d0;
 }
 
 @-webkit-keyframes animate {
